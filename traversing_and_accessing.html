@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>traversing and accessing</h1>
+    </div>
+    <div>
+      <input type="number" title="add" id="myInput" />
+      <button onclick="getval()">Get</button>
+    </div>
+    <div>
+      <h1 id="h1">null</h1>
+    </div>
+    <script>
+      let ele = document.getElementById("myInput");
+      let h1 = document.getElementById("h1");
+
+      let a = [1, 2, 3, 4, 5, 7, 8, 9, 23, 344, 55, 675];
+
+      function getval() {
+        ele.value > a.length - 1 && typeof ele.value === "string"
+          ? (h1.innerText = "not valid")
+          : (h1.innerText = a[ele.value]);
+      }
+    </script>
+  </body>
+</html>
