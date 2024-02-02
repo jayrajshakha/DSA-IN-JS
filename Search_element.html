@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Search element</h1>
+      <div>
+        <input type="text" placeholder="search" id="input" />
+        <button onclick="findd()">Find</button>
+      </div>
+      <div>
+        <h1 id="h1"></h1>
+      </div>
+    </div>
+
+    <script>
+      let data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      let search = document.getElementById("input");
+      let h = document.getElementById("h1");
+
+      function findd() {
+        console.log(search.value);
+        for (let index = 0; index < data.length; index++) {
+          data[index] == parseInt(search.value) ? (h.innerText = index) : null;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Merge Two array manually</h1>
+      <div></div>
+    </div>
+
+    <script>
+      let data1 = [1, 2, 3, 4, 5];
+      let data2 = [6, 7, 8, 9, 10];
+      let data3 = [];
+
+      for (let index = 0; index < data1.length; index++) {
+        data3[index] = data1[index];
+      }
+      console.log(data3.length);
+
+      for (let index = 0; index < data2.length; index++) {
+        data3[data1.length + index] = data2[index];
+      }
+      console.log(data3.length);
+    </script>
+  </body>
+</html>
