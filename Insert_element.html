@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Insert element in array</h1>
+      <div>
+        <input placeholder="val" id="number" type="text" title="number" />
+        <br />
+        <br />
+        <input placeholder="position" id="pos" type="text" title="position" />
+        <br />
+        <br />
+        <button onclick="show()">Show</button>
+        <br />
+        <br />
+        <div id="data">0</div>
+      </div>
+    </div>
+    <script>
+      let number = document.getElementById("number");
+      let position = document.getElementById("pos");
+      let data = document.getElementById("data");
+
+      let a = [10, 20, 30, 40, 60, 70, 80, 90, 100];
+
+      function show() {
+        console.log("value :", number.value, "position :", position.value);
+        for (let index = a.length - 1; index >= 0; index--) {
+          index >= position.value ? (a[index + 1] = a[index]) : a[index];
+          index === parseInt(position.value)
+            ? (a[position.value] = parseInt(number.value))
+            : a[index];
+        }
+        document.write(`${a} </br>`);
+      }
+    </script>
+  </body>
+</html>
